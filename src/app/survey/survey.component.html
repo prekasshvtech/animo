@@ -1,0 +1,67 @@
+<nav class="navbar navbar-dark">
+    <div class="marqueeNav">
+        <ul class="marqueeWrapper">
+        <li class="items" *ngFor="let item of menuList">
+            {{item}}
+            <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="23.498" height="23.493" viewBox="0 0 28.498 28.493">
+                <path id="Union_6" data-name="Union 6" d="M-15632.343-2153.683a4.712,4.712,0,0,1-1.514-4.422c.02-.151.033-.291-.144-.377-.824-.4-.961-1.078-.779-1.992.008-.039.02-.076.043-.173-.255.018-.486.023-.714.049a1.318,1.318,0,0,1-1.442-.76.462.462,0,0,0-.58-.3,4.787,4.787,0,0,1-4.459-1.611,4.482,4.482,0,0,1-1.053-3.441,5.13,5.13,0,0,1,.217-1.131,4.618,4.618,0,0,1,4.255-3.084c.406.018.812.053,1.218.057a.426.426,0,0,0,.319-.132,1.567,1.567,0,0,1,2.046-.763.276.276,0,0,0,.09.006.306.306,0,0,0,.057-.012c-.02-.344-.045-.665-.057-.989a1.192,1.192,0,0,1,.719-1.113c.307-.163.3-.371.259-.63a5,5,0,0,1,.063-1.975,4.11,4.11,0,0,1,1.2-2.13,4.613,4.613,0,0,1,2.174-1.313,2.6,2.6,0,0,1,.468-.073,4.975,4.975,0,0,1,3.063.571,4.608,4.608,0,0,1,2.24,3.3,8.9,8.9,0,0,1-.012,1.661c-.018.261-.035.458.251.571a1.376,1.376,0,0,1,.306.229,1.032,1.032,0,0,1,.43,1.025.878.878,0,0,1-.047.529c-.006.106-.012.215-.02.326.246-.024.455-.043.668-.067a1.323,1.323,0,0,1,1.435.72.465.465,0,0,0,.5.263,11.957,11.957,0,0,1,2.157.067,4.672,4.672,0,0,1,3.491,4.374,4.678,4.678,0,0,1-2.506,4.3,3.9,3.9,0,0,1-2.11.5c-.375-.01-.75-.057-1.123-.067a.381.381,0,0,0-.265.125,2.209,2.209,0,0,0-.218.352,1.254,1.254,0,0,1-1.317.608c-.224-.027-.447-.049-.689-.074,0,.322-.025.64.006.95a1.064,1.064,0,0,1-.623,1.115.556.556,0,0,0-.293.575,8.3,8.3,0,0,1-.128,2.116,4.414,4.414,0,0,1-3.788,3.354,5.368,5.368,0,0,1-.788.06A4.316,4.316,0,0,1-15632.343-2153.683Z" transform="translate(15643.5 2180.496)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+              </svg>
+            </span>
+        </li>
+        </ul>
+    </div>
+</nav>
+<div *ngIf="titleState" class="text-white text-center surveyTitle" >
+    <h1 class="mb40">OF ANIMO</h1>
+    <h1 class="mt40">EXCLUSIVE SAMPLING</h1>
+<p class="f25 bold color-grey pt30">
+  FROM OUR HEARTS TO YOURS
+  </p>
+<p class="f25 bold color-grey" >PLEASE ENTER YOUR EMAIL TO PROCEED</p>
+</div>
+<div class="input-group mb-3 emailGroup mt-5" *ngIf="showField == 'emailField'"[@enterEmail] ><!---->
+    <input type="text" class="form-control"  id="emailid" placeholder="E-MAIL ADDRESS" aria-label="Recipient's username" aria-describedby="basic-addon2" >
+    <div class="input-group-append ml-3">
+      <button class="btn btn-dark sqrBtn" type="button" (click)="validateEmail()"><span class="icon-right-arrow-enter"></span></button>
+    </div>
+  </div>  
+<div class="container-fluid mt-5" *ngIf="showField == 'ratingForm'"[@showForm]>
+    <div class="row">
+        <div class="col-md-6 centered surveyWrapper" >
+            <div class="row">
+                <div class="col-12"><h5 class="text-white text-center f40 pb30" >PLEASE RANK YOUR FAVORITES:</h5></div>
+
+                <div *ngFor="let rate of rateArray" class="col-12 text-center">
+                    <div class="row pb-5">
+                        <div class="col-5">
+                            <label>{{rate.ProductVariant}}</label>
+                        </div>
+                        <div class="col-7">
+                            <fieldset class="rating">
+                                <input type="radio" [id]="rate.ProductVariant+5" [name]="rate.ProductVariant" [checked]="rate.Rating == 5" value="5" (click)="rateProvider($event, rate)" /><label class = "full icon-heart-outline" [for]="rate.ProductVariant+5" title="Awesome - 5 stars"></label>
+                                <!-- <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label> -->
+                                <input type="radio" [id]="rate.ProductVariant+4" [name]="rate.ProductVariant" [checked]="rate.Rating == 4" value="4" (click)="rateProvider($event, rate)" /><label class = "full icon-heart-outline" [for]="rate.ProductVariant+4" title="Pretty good - 4 stars"></label>
+                                <!-- <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label> -->
+                                <input type="radio" [id]="rate.ProductVariant+3" [name]="rate.ProductVariant" [checked]="rate.Rating == 3" value="3" (click)="rateProvider($event, rate)" /><label class = "full icon-heart-outline" [for]="rate.ProductVariant+3" title="Meh - 3 stars"></label>
+                                <!-- <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label> -->
+                                <input type="radio" [id]="rate.ProductVariant+2" [name]="rate.ProductVariant" [checked]="rate.Rating == 2" value="2" (click)="rateProvider($event, rate)" /><label class = "full icon-heart-outline" [for]="rate.ProductVariant+2" title="Kinda bad - 2 stars"></label>
+                                <!-- <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label> -->
+                                <input type="radio" [id]="rate.ProductVariant+1" [name]="rate.ProductVariant" [checked]="rate.Rating == 1" value="1" (click)="rateProvider($event, rate)" /><label class = "full icon-heart-outline" [for]="rate.ProductVariant+1" title="Sucks big time - 1 star"></label>
+                                <!-- <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label> -->
+                            </fieldset>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-dark centered mt-5" (click)="submit()">Submit</button>
+    </div>
+</div>
+<div class="row">
+    <div class="thankButton">
+        <button class="btn btn-dark btnCenter defaultCursor " *ngIf="showField == 'thankyouField'" [@enterThankyou] type="button" >Thank you for your support</button>
+    </div>
+</div>

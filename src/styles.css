@@ -1,0 +1,388 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "./assets/style.css";
+@import "./assets/fonts/stylesheet.css";
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+::-webkit-scrollbar {
+    width: .5em;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(82, 82, 82);
+  outline: 1px solid slategrey;
+}
+
+body{
+    font-family: Biko;
+    background-color: #000;
+}
+body.survey{
+    background-color: #000;
+}
+.contentWrapper{
+    min-height: calc(100vh - 138px);
+    position: relative;
+}
+section.contentWrapper{
+    overflow: hidden;
+}
+.subscribePannel{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+.subscribeContent{
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+.subscribePannel.static{
+    position: static !important;
+    overflow-y: auto;
+    height: calc(100vh - 170px);
+}
+.sqrBtn{
+    padding: .5rem .8rem !important;
+}
+.btnCenter{
+    margin: 0 auto;
+}
+.form-group{
+    text-align: left;
+}
+label{
+    color: #fff;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(228 225 225 / 80%) inset;
+  }
+input[type="text"]:focus, textarea:focus{
+    background-color: rgb(228 225 225 / 80%) !important;
+    color: #000;
+}
+input[type="text"], textarea{
+    background-color: rgb(228 225 225 / 80%) !important;
+    color: #000;
+    border-radius: 0 !important;
+    border: 0px !important;
+    font-weight: normal !important;
+}
+textarea{
+    width: 100%;
+}
+.bg-dark{
+    background: rgb(0 0 0 / 100%) !important;
+}
+.slideNav{
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slideNav ul{
+    width: 200%;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    animation:marquee 45s linear infinite;
+}
+@media screen and (max-width: 480px) {
+    video{
+        width: auto !important;
+        height: auto !important;
+    }
+    .marqueeWrapper .items{
+        float: left;
+        width: calc(100% / 2) !important;}
+
+        .marqueeWrapper .items{
+            display: none;
+        }
+        .marqueeWrapper .items:nth-child(1), .marqueeWrapper .items:nth-child(2){
+            display: inline-block;
+
+        }
+
+    .subscribePannel{
+        /* position: static !important; */
+    }
+    .slideNav ul{
+        width: 200% !important;
+        animation:marquee 10s linear infinite;
+    }
+    .nav-item{
+        padding:27px 45px !important;
+    }
+    .form-group {
+        text-align: left;
+        padding: 0 10px !important;
+    }
+  }
+.slideNav ul:hover{animation-play-state:paused}
+.slideNav ul li{
+    float: left;
+}
+.slideNav ul li a{
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    padding: 0;
+    font-weight: bold;
+}
+.nav-item{
+    padding:27px 160px;
+    position: relative;
+}
+.nav-item span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: rgb(255 255 255 / 40%);
+    top:23px;
+    left:-13px;
+}
+
+.nav-item span svg{
+    /* height: 24px; */
+}
+footer{
+    color:#fff;
+    font-size: 15px;
+    height: 49px;
+    line-height: 36px;
+    font-weight: normal;
+}
+.btn-dark{
+    background-color: #000 !important;
+}
+.btn {
+    border-radius: 0;
+    padding: 0.5rem 2rem;
+}
+nav.navbar.navbar-dark.{
+    background: rgb(0 0 0) !important;
+    border-bottom: 0;
+    height: 88px;
+    overflow: hidden;
+    font-size: 22px;
+    font-weight: normal;
+    padding-top:0;
+    padding-bottom:0;
+}
+.centered{
+    margin: 0 auto;
+}
+.slick-list{
+    width: 100vw;
+}
+.slick-slide{
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+td, th {
+    padding: 5px !important;
+}
+.slick-slide .icon-clubs{
+    position: absolute;
+    right:-5px;
+    top:3px;
+}
+.slick-prev{
+    left:-15px;
+}
+.slick-next{
+    right:35px;
+}
+
+.slick-next, .slick-prev {
+    display: none !important;
+}
+
+ngx-slick-carousel:hover .slick-next, ngx-slick-carousel:hover .slick-prev {
+    display: block !important;
+}
+
+footer span.right {
+    float: right;
+    margin-right: 50px;
+}
+
+@keyframes marquee{
+    0% {
+        transform: translate(0, 0);
+      }
+      100%{
+        transform: translate(-109%, 0);
+      }
+}
+
+video{
+    width:100%;
+}
+footer .footerleft{
+    float: left;
+    font-size: 22px;
+    margin-top: 7px;
+    cursor: pointer;
+}
+footer .right{
+    cursor: pointer;
+}
+.audioButton{
+    padding:.4rem .6rem .6rem !important
+}
+
+.icon-volume-mute:before{
+    font-size: 18px;
+    position: relative;
+    top:3px;
+}
+.rightBtn{
+    float: right !important;
+}
+.defaultCursor{
+    cursor: default !important;
+}
+.emailGroup{
+    max-width: 250px;
+    margin: 0 auto;
+}
+.thankButton{
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+.btnAnimPos{
+    position: absolute !important;
+    top:-50px;
+    width: 100%;
+    overflow: hidden;
+    height: 50px;
+}
+.subBtn{
+    position: absolute !important;
+    width: 100%;
+    z-index: 9;
+    top:0;
+}
+.emailField{
+    position: absolute !important;
+    width: 100%;
+    z-index: 19;
+    top:0;
+}
+.thnkBtn{
+    position: absolute !important;
+    width: 100%;
+    z-index: 29;
+    top:0;
+}
+.sqrBtn {
+    height: 38px;
+}
+.video-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    z-index: -1;
+  }
+  .video-container video {
+    /* Make video to at least 100% wide and tall */
+    min-width: 100%; 
+    min-height: 100%; 
+  
+    /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+    width: auto;
+    height: auto;
+  
+    /* Center the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .btn-transparent{
+      background: transparent !important;
+  } 
+  .btn-noborder, .btn-noborder:focus, .btn-noborder:active{
+      border:0 !important;
+      outline: 0 !important;
+      box-shadow:none;
+  }
+  .bg-transparent{
+      background: transparent !important;
+  }
+  .contact{
+      cursor: pointer;
+  }
+  .marqueeNav{
+    width: 100%;
+    overflow: hidden;
+  }
+  .marqueeWrapper{
+    width: 200%;
+    position: absolute;
+    left:0;
+    margin: 0;
+    top:0;
+    list-style-type: none;
+  }
+  .marqueeWrapper .items{
+      float: left;
+      width: calc(100% / 6);
+      font-weight: bold;
+      position: relative;
+      text-align: center;
+      color: #fff !important;
+      padding: 26px 0;
+  }
+  
+  .marqueeWrapper .items span{
+      position: absolute;
+      right: 0;
+      top:22px;
+  }
+  
+nav.navbar.navbar-dark {
+    height: 88px;
+    overflow: hidden;
+}
+
+.mt150{
+    margin-top:150px;
+}
+ul#myTab {
+    overflow: hidden;
+    width: 100%;
+}
+#myTab li.nav-item {
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    /* .iphone .video-container video{
+      min-height: 150% !important;
+      height: 120%;
+    } */
+    .btnAnimPos{
+        top:-100px !important
+    }
+    .btnAnimPos + div {
+        position: relative;
+        top: -45px;
+    }
+  }

@@ -1,0 +1,156 @@
+<div class="video-container">
+  <video id="bgVideo"  playsinline autoplay loop muted onloadedmetadata="this.muted = true" >
+    <source [src]="bgVideo" type="video/mp4"  playsinline autoplay loop muted />
+    <!-- <source [src]="bgVideoogg" type="video/mp4" playsinline="true" autoplay loop /> -->
+  </video>
+  <!--  -->
+</div>
+
+<!-- <div class="marquee-wrapper marquee-on">
+  <div class="marquee">
+  <div id="animHolder" style="width: 200%; animation-duration: 40s;"><span class="texts color0" style="float:left; width:25%;"><span class="text">Free shipping &amp; 30 days free returns. Receive two complimentary samples with any order.</span></span><span class="texts color1" style="float:left; width:25%;"><span class="text">Free shipping &amp; 30 days free returns. Receive two complimentary samples with any order.</span></span><span class="texts color2" style="float:left; width:25%;"><span class="text">Free shipping &amp; 30 days free returns. Receive two complimentary samples with any order.</span></span><span class="texts color3" style="float:left; width:25%;"><span class="text">Free shipping &amp; 30 days free returns. Receive two complimentary samples with any order.</span></span></div>
+  </div>
+  </div>
+   -->
+<nav class="navbar navbar-dark">
+
+  <!-- <div class="slideNav">
+    <ul class="navWrapper">
+      <li class="nav-item" *ngFor="let item of menuList">
+        <a class="nav-link active" aria-current="page" href="#">{{item}}</a>
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25.295" height="34" viewBox="0 0 25.295 34">
+            <g id="Group_16020" data-name="Group 16020" transform="translate(-0.001 0)">
+              <path id="Path_21260" data-name="Path 21260" d="M239.447,36.629c.284-.347.542-.719.856-1.037a4.3,4.3,0,1,1,6.158,5.984c-.159.168-.3.354-.482.572l-.53-.571c.272-.3.541-.569.772-.864a3.5,3.5,0,0,0-.4-4.918,3.579,3.579,0,0,0-4.9.237q-6.181,6.179-12.359,12.36a2.359,2.359,0,0,1-3.846-.494,2.253,2.253,0,0,1,.44-2.736c.346-.364.753-.669,1.23-1.086l-1.016-.731c-2.084,1.462-2.869,3.612-1.372,5.63a3.527,3.527,0,0,0,5.214.449c1.923-1.878,3.8-3.806,5.7-5.706q3.463-3.463,6.938-6.913a2.34,2.34,0,0,1,3.436,3.169,9.58,9.58,0,0,1-.758.733l-.4-.492-.153-.162a3.028,3.028,0,0,0,.587-.376,1.587,1.587,0,0,0,.026-2.359,1.621,1.621,0,0,0-2.287.1q-2.5,2.477-4.976,4.976c-.074.074-.134.164-.258.32.8.788,1.6,1.566,2.394,2.351.961.953,1.9,1.924,2.876,2.865a1.591,1.591,0,0,0,2.617-.461,1.347,1.347,0,0,0-.133-1.483c-.385-.489-.842-.921-1.356-1.474L241.9,46.33l-.66-.609,1.851-1.6-1.045-.942-1.589,1.809-.584-.677,1.782-1.628-1.892-1.695.673-.56c.535.542,1.062,1.08,1.594,1.615,1.019,1.022,2.052,2.031,3.057,3.067a2.328,2.328,0,0,1,.014,3.429,2.38,2.38,0,0,1-3.36-.137q-2.379-2.367-4.747-4.745c-.139-.138-.284-.27-.475-.452l-.711.929c.034.038.154.185.287.319q2.37,2.376,4.744,4.748a3.606,3.606,0,0,0,5.025.271,3.513,3.513,0,0,0,.072-5.206c-1.354-1.4-2.748-2.764-4.13-4.137a8,8,0,0,0-.668-.522l.652-.514c.691.679,1.372,1.345,2.048,2.016.909.9,1.837,1.788,2.717,2.717a4.27,4.27,0,0,1-2.039,7.159,4.166,4.166,0,0,1-4.046-1.1c-.378-.358-.72-.754-1.148-1.206l-1.679,1.864-.514-.773,1.763-1.472-1.017-.871-1.5,1.731-.673-.634L237.395,47l-2.328-2.328c-.068.061-.215.182-.349.316q-2.413,2.41-4.822,4.823a4.352,4.352,0,0,1-6.059.142,4.278,4.278,0,0,1-.146-6.083c.367-.393.8-.728,1.263-1.148-.43-.432-.769-.769-1.1-1.11a4.3,4.3,0,0,1,5.745-6.386c1.663,1.548,3.225,3.2,4.83,4.814a1.285,1.285,0,0,1,.121.222l-.521.482c-.806-.825-1.567-1.611-2.337-2.39s-1.552-1.561-2.333-2.337a3.58,3.58,0,0,0-4.906-.206,3.45,3.45,0,0,0-.4,4.866c.671.82,1.469,1.537,2.218,2.292q1.447,1.461,2.907,2.909c.125.125.258.242.431.4l.78-.855c-.12-.131-.246-.276-.381-.412-1.58-1.583-3.167-3.161-4.742-4.75a2.276,2.276,0,0,1-.38-3.128,2.24,2.24,0,0,1,3.326-.507c1.684,1.573,3.256,3.265,4.919,4.952l-.51.547-1.564-1.912L229.307,42.2l-.529-.713,1.72-1.572-.948-.83-1.589,1.806-.533-.7-.115-.119L229.05,38.6a15.684,15.684,0,0,0-1.352-1.423,1.552,1.552,0,0,0-2.029.175,1.484,1.484,0,0,0-.139,2.062,19.031,19.031,0,0,0,1.347,1.4q1.89,1.9,3.789,3.789c.087.087.188.161.259.221l6.289-6.3L235,36.283l-1.445,1.7-.654-.608,1.851-1.593-1.071-.824L232.143,36.7l-.57-.863,1.786-1.57c-.5-.439-.936-.766-1.3-1.156a4.37,4.37,0,1,1,6.615-.532c-.3.4-.663.747-1.068,1.2l-.492-.546c.3-.329.579-.606.823-.913a3.612,3.612,0,0,0-5.353-4.838,3.508,3.508,0,0,0-.1,4.974c1.427,1.528,2.947,2.97,4.415,4.46.327.332.607.709.964,1.131l.86-.981c-.108-.118-.233-.263-.369-.4q-2.341-2.328-4.684-4.654a2.58,2.58,0,0,1-.918-2.366,2.375,2.375,0,0,1,1.894-1.977,2.41,2.41,0,0,1,2.626,1.179,2.467,2.467,0,0,1-.353,2.819c-.2.229-.377.479-.6.761l-.558-.618c.208-.224.425-.435.616-.668a1.669,1.669,0,1,0-2.89-1.427,1.478,1.478,0,0,0,.41,1.4c1.744,1.777,3.508,3.533,5.267,5.3a.627.627,0,0,0,.138.081Zm-12.733,8c-.388.408-.833.808-1.194,1.273a1.487,1.487,0,0,0,.157,2.057,1.556,1.556,0,0,0,1.983.189,15.951,15.951,0,0,0,1.332-1.239Z" transform="translate(-222.49 -25.651)" fill="#fff"/>
+              <path id="Path_21261" data-name="Path 21261" d="M262.864,126.551l.447-.508c.735.725,1.4,1.379,2.063,2.036.922.914,1.855,1.818,2.757,2.751a4.375,4.375,0,0,1-2.212,7.39,4.349,4.349,0,0,1-4.544-1.929,4.244,4.244,0,0,1,.143-4.874c.465-.614,1.032-1.15,1.667-1.846l-1.86-1.518.6-.626c.151.128.251.2.338.288q2.133,2.113,4.264,4.228a2.622,2.622,0,0,1,.894,2.529,2.4,2.4,0,0,1-1.909,1.842,2.454,2.454,0,0,1-2.525-1.1,2.338,2.338,0,0,1,.128-2.691c.411-.517.9-.973,1.387-1.5l-.793-.754c-1.862,1.456-2.765,2.87-2.035,4.926a3.376,3.376,0,0,0,2.99,2.324,3.413,3.413,0,0,0,3.517-1.753,3.291,3.291,0,0,0-.1-3.78,20.2,20.2,0,0,0-2.018-2.177c-1.009-1.031-2.038-2.043-3.057-3.064A2.014,2.014,0,0,1,262.864,126.551Zm2.188,4.992a18.4,18.4,0,0,0-1.38,1.521,1.541,1.541,0,0,0,.334,2.166,1.682,1.682,0,0,0,2.218-.092,1.594,1.594,0,0,0,.152-2.2C265.993,132.471,265.543,132.056,265.052,131.542Z" transform="translate(-252.411 -104.314)" fill="#fff"/>
+            </g>
+          </svg>
+        </span>
+      </li>
+    </ul>
+  </div> -->
+
+  <div class="marqueeNav">
+    <ul class="marqueeWrapper">
+      <li class="items" *ngFor="let item of menuList">
+        {{item}}
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="23.498" height="23.493" viewBox="0 0 28.498 28.493">
+            <path id="Union_6" data-name="Union 6" d="M-15632.343-2153.683a4.712,4.712,0,0,1-1.514-4.422c.02-.151.033-.291-.144-.377-.824-.4-.961-1.078-.779-1.992.008-.039.02-.076.043-.173-.255.018-.486.023-.714.049a1.318,1.318,0,0,1-1.442-.76.462.462,0,0,0-.58-.3,4.787,4.787,0,0,1-4.459-1.611,4.482,4.482,0,0,1-1.053-3.441,5.13,5.13,0,0,1,.217-1.131,4.618,4.618,0,0,1,4.255-3.084c.406.018.812.053,1.218.057a.426.426,0,0,0,.319-.132,1.567,1.567,0,0,1,2.046-.763.276.276,0,0,0,.09.006.306.306,0,0,0,.057-.012c-.02-.344-.045-.665-.057-.989a1.192,1.192,0,0,1,.719-1.113c.307-.163.3-.371.259-.63a5,5,0,0,1,.063-1.975,4.11,4.11,0,0,1,1.2-2.13,4.613,4.613,0,0,1,2.174-1.313,2.6,2.6,0,0,1,.468-.073,4.975,4.975,0,0,1,3.063.571,4.608,4.608,0,0,1,2.24,3.3,8.9,8.9,0,0,1-.012,1.661c-.018.261-.035.458.251.571a1.376,1.376,0,0,1,.306.229,1.032,1.032,0,0,1,.43,1.025.878.878,0,0,1-.047.529c-.006.106-.012.215-.02.326.246-.024.455-.043.668-.067a1.323,1.323,0,0,1,1.435.72.465.465,0,0,0,.5.263,11.957,11.957,0,0,1,2.157.067,4.672,4.672,0,0,1,3.491,4.374,4.678,4.678,0,0,1-2.506,4.3,3.9,3.9,0,0,1-2.11.5c-.375-.01-.75-.057-1.123-.067a.381.381,0,0,0-.265.125,2.209,2.209,0,0,0-.218.352,1.254,1.254,0,0,1-1.317.608c-.224-.027-.447-.049-.689-.074,0,.322-.025.64.006.95a1.064,1.064,0,0,1-.623,1.115.556.556,0,0,0-.293.575,8.3,8.3,0,0,1-.128,2.116,4.414,4.414,0,0,1-3.788,3.354,5.368,5.368,0,0,1-.788.06A4.316,4.316,0,0,1-15632.343-2153.683Z" transform="translate(15643.5 2180.496)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+          </svg>
+          
+        </span>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section (wheel)="onMouseWheel($event)" class="contentWrapper">
+
+  
+  <div class="subscribePannel text-center" [class.static]="showField == 'myform'">
+    <div class="subscribeContent">
+      <div class="btnAnimPos">
+        <button *ngIf="showField == 'subButton'" type="button" class="btn btn-lg hBtn" [@enterAnimation] (click)="showField = 'inputfield1'" >
+          <svg width="150px" height="46px" viewBox="10 0 150 50" class="">
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+          </svg>
+          <span>Subscribe</span>
+        </button>
+  
+      <div class="input-group mb-3 emailGroup" *ngIf="showField == 'inputfield1'" [@enterEmail]>
+        <input type="text" class="form-control"  id="emailid" placeholder="E-mail Address" aria-label="Recipient's username" aria-describedby="basic-addon2" >
+        <div class="input-group-append ml-3">
+          <button class="btn btn-dark sqrBtn" type="button" (click)="validateEmail()"><span class="icon-right-arrow-enter"></span></button>
+        </div>
+      </div>
+      <!-- <div *ngIf='showField == "inputfield1"'  >
+        Invalid email
+      </div> -->
+      <div class="input-group mb-3" *ngIf="showField == 'inputfield2'" >
+        <div class="centered">
+          <button class="btn btn-dark btnCenter defaultCursor thankButton" *ngIf="showField == 'inputfield2'" [@enterThankyou] type="button" >Thank you for your support</button>
+        </div>
+      </div>
+      </div>
+    <form [formGroup]="profileForm" class="pt-5" *ngIf="showField == 'myform'" [@showForm]>
+      <div class="form-group row">
+        <div class="col-sm-12">
+          <label class="pt-2">SEND US A MESSAGE</label>  
+          <button type="button" class="btn btn-dark btn-sm rightBtn" (click)="showField = 'subButton'" >return to home</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" formControlName="firstName" required>
+        
+      <div *ngIf="submitted && profileForm.controls.firstName.status == 'INVALID' && profileForm.controls.firstName.errors.required">First Name required</div>
+        
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" class="form-control" formControlName="lastName" required>
+        <div *ngIf="submitted && profileForm.controls.lastName.status == 'INVALID' && profileForm.controls.lastName.errors.required">Last Name required</div>
+      </div>
+      <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input type="text" class="form-control" formControlName="email" required email="true">
+        
+        <div *ngIf="submitted && profileForm.controls.email.status == 'INVALID' && profileForm.controls.email.errors.email">Invalid Email</div>
+        <div *ngIf="submitted && profileForm.controls.email.status == 'INVALID' && profileForm.controls.email.errors.required">Invalid Email</div>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="text" class="form-control" formControlName="mobile">
+        <!-- <div *ngIf="submitted && profileForm.controls.mobile.status == 'INVALID' && profileForm.controls.mobile.errors.required">Mobile number required</div> -->
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea formControlName="message" rows="3" required></textarea>
+        <div *ngIf="submitted && profileForm.controls.message.status == 'INVALID' && profileForm.controls.message.errors.required">Message required</div>
+      </div>
+      <button type="submit" class="btn btn-dark" (click)="submitForm()">Submit</button>
+    </form>
+    <div>
+      <button type="button" class="btn btn-transparent btn-noborder btn-sm mt-3 audioButton" (click)="muteVideo()">
+        <span class="icon-mute"></span>
+      </button>
+    </div>
+    </div>
+  </div>
+</section>
+<section (wheel)="onMouseWheel($event)" class="contentWrapper container mt150">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 text-center">
+      <img style="max-width: 100%;" src="./../assets/image/img-1.jpg" />
+    </div>
+    <div class="col-md-4 col-sm-12 text-center text-white">
+      <p>OF ANIMO is a lifestyle brand founded in Los Angeles with a passion for creating deep, opulent ambiances. With vast aromatique expertise, our formulations bring bespoke experiences that invoke raw, unadulterated human emotions.</p>
+      <p>We offer refined personal care, fragrance, and home-essential products curated for distinctive storytelling.</p>
+      <p>Using only the finest quality resources and our clinical attention to being organic, all-natural, and sulfate-free, we seek unique and timeless experiences that transcend body wellness and cultural norms.</p>
+      <p>Our objective is to inspire unrestrained freedom for expressing human emotions, in all their forms, throughout all our mediums.</p>
+      <p>Promoting the atypical. Always from the heart.</p>
+
+    </div>
+    <div class="col-md-4 col-sm-12 text-center">
+      <img  style="max-width: 100%;" src="./../assets/image/img-2.jpg" />
+    </div>
+  </div>
+
+</section>
+<footer class="bg-transparent">
+  <div class="container-fluid text-center pt-2">
+    <div class="row">
+      <div class="col-3">
+        <a class="text-white" href=" https://instagram.com/of.animo?igshid=161v1du7m981q" target="_blank"><span class="footerleft icon-instagram-seeklogocom"></span></a>
+      </div>
+      <div class="col-6">
+        <span class="centered">&copy; 2021 OF ANIMO</span>
+      </div>
+      <div class="col-3 text-right contact">
+        <span class="" (click)="showForm()" >CONTACT</span>
+      </div>
+    </div>
+  </div>
+</footer>

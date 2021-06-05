@@ -1,0 +1,108 @@
+<div class="video-container">
+  <video id="bgVideo"  playsinline autoplay loop muted >
+    <source [src]="bgVideo" type="video/ogg" />
+  </video>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+    <a href="#" class="text-white" >Dashboard</a>
+</nav>
+<section class="contentWrapper container">
+    <div class="row">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation" (click)="switchTabs($event)">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" ref="#table" role="tab" aria-controls="home" aria-selected="true">Message</a>
+          </li>
+          <!-- <li class="nav-item" role="presentation" (click)="switchTabs($event)">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" ref="#product" role="tab" aria-controls="profile" aria-selected="false">Add New Product</a>
+          </li> -->
+          <li class="nav-item" role="presentation" (click)="switchTabs($event)">
+            <a class="nav-link" id="user-tab" data-toggle="tab" ref="#user" role="tab" aria-controls="profile" aria-selected="false">Product Maping</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="table" role="tabpanel" aria-labelledby="home-tab">
+            <div class="col-12">
+              <h4 class="text-white" >User's Messages </h4>
+                <div class="table-responsive">
+                  <table class="table table-bordered text-dark bg-light" style="margin-top: 50px;">
+                    <thead class="bg-dark text-white">
+                      <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Message</th>
+                        <!-- <th>Assign Product to rate</th> -->
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let list of userMsgList;">
+                        <td>{{list.firstName}}</td>
+                        <td>{{list.lastName}}</td>
+                        <td>{{list.email}}</td>
+                        <td>{{list.mobile}}</td>
+                        <td>{{list.message}}</td>
+                        <!-- <td>
+                          <select (change)="assignProduct($event, list)">
+                            <option *ngFor="let product of productList">{{product.ProductName}}</option>
+                          </select>
+                        </td> -->
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+          </div>
+          <!-- <div class="tab-pane fade" id="product" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="col-12">
+              <h4 class="text-white" >Add New Product</h4>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="ProductName" placeholder="Product Name" />
+              </div>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="Description" placeholder="Description" />
+              </div>
+              <div class="form-group">
+                 <input type="text" [(ngModel)]="type1" placeholder="Type 1" />
+              </div>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="type2" placeholder="Type 2" />
+              </div>
+              <div class="form-group">
+                <input type="text" [(ngModel)]="type3" placeholder="Type 3" />
+              </div>
+              <button class="" (click)="productSubmit()">Add Product</button>
+            </div>
+          </div> -->
+          <div class="tab-pane fade" id="user" role="tabpanel">
+            <div class="col-12">
+              <h4 class="text-white" > Map Product to Rate</h4>
+              <table class="table table-bordered text-dark bg-light" style="margin-top: 50px;">
+                <thead class="bg-dark text-white">
+                  <tr>
+                    <th>User</th>
+                    <!-- <th>Assign Product to rate</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let list of userList;">
+                    <td>{{list.Username}}</td>
+                    <!-- <td>
+                      <select (change)="assignProduct($event, list)">
+                        <option>none</option>
+                        <option *ngFor="let product of productList">{{product.ProductName}}</option>
+                      </select>
+                    </td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<footer class="bg-dark">
+    <div class="container-fluid text-center">
+      &copy; 2021 OF ANIMO
+    </div>
+</footer>
