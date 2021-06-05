@@ -2,6 +2,7 @@
   "name": "prelaunch",
   "version": "0.0.0",
   "scripts": {
+    "postinstall": "ngcc",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -11,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.0.2",
+    "@angular/animations": "^9.0.7",
     "@angular/common": "~9.0.2",
     "@angular/compiler": "~9.0.2",
     "@angular/core": "~9.0.2",
@@ -21,7 +22,11 @@
     "@angular/router": "~9.0.2",
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
+    "ngx-bootstrap": "^6.2.0",
     "ngx-slick-carousel": "^0.5.1",
+    "ngx-tabs": "0.0.13",
+    "ngx-toastr": "^13.2.0",
+    "ngx-videogular": "^10.1.0-0",
     "rxjs": "~6.5.4",
     "slick-carousel": "^1.8.1",
     "slicknav": "^1.0.8",
