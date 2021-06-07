@@ -1,0 +1,6 @@
+.table-responsive table
+{
+    height: calc(100vh - 250px);
+    overflow-x: scroll;
+    display: block;
+}

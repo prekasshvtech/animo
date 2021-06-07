@@ -18,6 +18,7 @@ export class AdminComponent implements OnInit {
   type2: any;
   type3: any;
   productList: any = [];
+  RatingsArray:any;
   constructor(public httpClient: HttpClient,) { }
 
   ngOnInit(): void {
@@ -36,6 +37,11 @@ export class AdminComponent implements OnInit {
     }).subscribe((res) => {
       this.userList = res;
     });
+    this.httpClient.get('https://ofanimo.com:3000/getRated', {
+      'headers': {
+        'Content-Type': 'application/json'
+      }
+    }).subscribe((res) => this.RatingsArray = res)
 
     this.addProduct()
   }

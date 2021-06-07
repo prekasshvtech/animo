@@ -57,11 +57,12 @@
         </div>
     </div>
     <div class="row">
-        <button type="submit" class="btn btn-dark centered mt-5" (click)="submit()">Submit</button>
+        <button type="submit" class="btn btn-dark centered" (click)="submit()">Submit</button>
     </div>
 </div>
 <div class="row">
     <div class="thankButton">
         <button class="btn btn-dark btnCenter defaultCursor " *ngIf="showField == 'thankyouField'" [@enterThankyou] type="button" >Thank you for your support</button>
+        <p class="text-white text-center mt-15" *ngIf="showField == 'thankyouField'" >Your page will be redirected to Home page in few seconds</p>
     </div>
 </div>

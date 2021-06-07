@@ -265,10 +265,17 @@ playBanner() {
     console.log(this.profileForm.value);//50.62.81.216:3000
     this.httpClient.post('https://ofanimo.com:3000/customers',  this.profileForm.value, {'headers': {
     'Content-Type': 'application/json'
-  }}).subscribe((res)=>{
+  }}).subscribe({
+    next: (res)=>{
             this.profileForm.reset();
             this.submitted = false;
-        });
+            this.showField = 'inputfield2'
+        },
+        error: (err) => {console.log(err)},
+        complete: () => {
+          
+        }
+      });
   }
 
   ngOnDestroy() {

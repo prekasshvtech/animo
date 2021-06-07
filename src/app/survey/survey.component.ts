@@ -179,7 +179,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
               'Content-Type': 'application/json'
             }
           }).subscribe({
-            
+
             next: (res: any) => { console.log(res); responseId = res.employee_id; userID = res.employee_id },
             error: (err) => { console.log(err) },
             complete: () => {
@@ -207,7 +207,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
                     this.showField = "ratingForm";
                   })
                 }
-                
+
               })
             }
           });
@@ -224,21 +224,21 @@ export class SurveyComponent implements OnInit, OnDestroy {
 
   submit() {
     console.log(this.newData);
-    // this.httpClient.post('https://ofanimo.com:3000/rating', this.rateArray, {'headers': {
-    //   'Content-Type': 'application/json'
-    // }}).subscribe((res)=>{
-    //           console.log(res);
-    //       });
-
-    this.httpClient.put('https://ofanimo.com:3000/ratings', this.newData, {
+    let isSucces = this.httpClient.put('https://ofanimo.com:3000/ratings', this.newData, {
       'headers': {
         'Content-Type': 'application/json'
       }
-    }).subscribe((res) => {
-      console.log(res);
+    }).subscribe(res => {
+        console.log(res);
+        return res;
+      });
 
-    });
-    this.router.navigate(['/'])
+    if(isSucces){
+      this.showField = 'thankyouField';
+      setTimeout(() => {
+        this.router.navigate(['/'])
+      },10000)
+    }
     // this.showField = 'emailField';
     // this.emailstate = false; 
     // this.titleState = true;

@@ -169,7 +169,7 @@ footer{
     border-radius: 0;
     padding: 0.5rem 2rem;
 }
-nav.navbar.navbar-dark.{
+nav.navbar.navbar-dark{
     background: rgb(0 0 0) !important;
     border-bottom: 0;
     height: 88px;
@@ -344,7 +344,7 @@ footer .right{
   .marqueeWrapper .items{
       float: left;
       width: calc(100% / 6);
-      font-weight: bold;
+      font-weight: 400;
       position: relative;
       text-align: center;
       color: #fff !important;
@@ -385,4 +385,13 @@ ul#myTab {
         position: relative;
         top: -45px;
     }
+  }
+
+  .nav-link{
+    color: aliceblue;
+    border: 1px solid !important;
+    background: rgb(0 0 0 / 80%);
+  }
+  nav.navbar.navbar-dark.bg-transparent{
+      background-color: transparent !important;
   }

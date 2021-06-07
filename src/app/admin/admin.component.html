@@ -16,15 +16,18 @@
             <a class="nav-link" id="profile-tab" data-toggle="tab" ref="#product" role="tab" aria-controls="profile" aria-selected="false">Add New Product</a>
           </li> -->
           <li class="nav-item" role="presentation" (click)="switchTabs($event)">
+            <a class="nav-link" id="ratinge-tab" data-toggle="tab" ref="#Ratings" role="tab" aria-controls="profile" aria-selected="false">Product Rating</a>
+          </li>
+          <li class="nav-item" role="presentation" (click)="switchTabs($event)">
             <a class="nav-link" id="user-tab" data-toggle="tab" ref="#user" role="tab" aria-controls="profile" aria-selected="false">Product Maping</a>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="table" role="tabpanel" aria-labelledby="home-tab">
             <div class="col-12">
-              <h4 class="text-white" >User's Messages </h4>
+              <h4 class="text-white" style="margin-top: 30px;" >User's Messages </h4>
                 <div class="table-responsive">
-                  <table class="table table-bordered text-dark bg-light" style="margin-top: 50px;">
+                  <table class="table table-bordered text-dark bg-light" style="margin-top: 20px;">
                     <thead class="bg-dark text-white">
                       <tr>
                         <th>First Name</th>
@@ -74,10 +77,33 @@
               <button class="" (click)="productSubmit()">Add Product</button>
             </div>
           </div> -->
+          <div class="tab-pane fade" id="Ratings" role="tabpanel" aria-labelledby="ratinge-tab">
+            <div class="col-12">
+              <h4 class="text-white" >Product Rating</h4>
+              <div class="table-responsive">
+                <table class="table table-bordered text-dark bg-light">
+                  <thead>
+                    <tr class="bg-dark text-white">
+                      <th>User Name</th>
+                      <th>Product Name</th>
+                      <th>Ratings</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let rate of RatingsArray">
+                      <td>{{rate.Username}}</td>
+                      <td>{{rate.ProductVariant}}</td>
+                      <td>{{rate.Rating}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
           <div class="tab-pane fade" id="user" role="tabpanel">
             <div class="col-12">
-              <h4 class="text-white" > Map Product to Rate</h4>
-              <table class="table table-bordered text-dark bg-light" style="margin-top: 50px;">
+              <h4 class="text-white" style="margin-top: 30px;" > Map Product to Rate</h4>
+              <table class="table table-bordered text-dark bg-light" style="margin-top: 20px;">
                 <thead class="bg-dark text-white">
                   <tr>
                     <th>User</th>
