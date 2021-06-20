@@ -123,6 +123,9 @@ textarea{
     .nav-item{
         padding:27px 45px !important;
     }
+    #myTab li.nav-item{
+        padding: 0 !important;
+    }
     .form-group {
         text-align: left;
         padding: 0 10px !important;
@@ -174,7 +177,7 @@ nav.navbar.navbar-dark{
     border-bottom: 0;
     height: 88px;
     overflow: hidden;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: normal;
     padding-top:0;
     padding-bottom:0;
@@ -344,7 +347,7 @@ footer .right{
   .marqueeWrapper .items{
       float: left;
       width: calc(100% / 6);
-      font-weight: 400;
+      font-weight: 700;
       position: relative;
       text-align: center;
       color: #fff !important;
@@ -354,7 +357,7 @@ footer .right{
   .marqueeWrapper .items span{
       position: absolute;
       right: 0;
-      top:22px;
+      top:27px;
   }
   
 nav.navbar.navbar-dark {

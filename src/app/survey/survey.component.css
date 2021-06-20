@@ -80,6 +80,9 @@ h1 { font-size: 75px;
 .mt40{
   margin-top:40px !important
 }
+.f22{
+  font-size: 22px;
+}
 .f25{
   font-size: 25px;
 }
@@ -127,4 +130,10 @@ h1 { font-size: 75px;
 
 .mt-15{
   margin-top:15px !important;
+}
+.marqueeWrapper .items span{
+  top:22px !important;
+}
+.mb20{
+  margin-bottom: 20px ;
 }
